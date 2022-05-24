@@ -33,7 +33,6 @@ const Randomiser = function (list: Array<string>) {
       const secondIndex: number = Math.floor(Math.random() * list.length);
       const secondParticipant: string = list[secondIndex];
       list.splice(secondIndex, 1);
-      console.log('are you sure you are not odd', group);
       // setGroup(group + 1);
       return `${firstParticipant} and ${secondParticipant}`;
     }
