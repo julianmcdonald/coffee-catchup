@@ -1,10 +1,10 @@
 {
-    "Adam": "Betty",
-  "Betty",
-  "Charles",
-  "Debbie",
-  "Earl",
-  "Fiona",
-  "Garry",
-  "Hermione","
+  "Adam": "Betty",
+  "Betty": "Adam",
+  "Charles": "Debbie",
+  "Debbie": "Charles",
+  "Earl": "Fiona",
+  "Fiona": "Earl",
+  "Garry": "Hermione",
+  "Hermione": "Garry"
 }

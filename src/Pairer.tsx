@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const coffeeAddicts = [
   "Adam",
@@ -8,11 +8,12 @@ const coffeeAddicts = [
   "Earl",
   "Fiona",
   "Garry",
+  "Hermione"
 ];
 
-let group = 1;
 
 const Randomiser = function (list: Array<string>) {
+  const [group, setGroup] = useState(0);
   if (list.length % 2 === 0) {
     const firstIndex: number = Math.floor(Math.random() * list.length);
     const firstParticipant: string = list[firstIndex];
@@ -20,9 +21,9 @@ const Randomiser = function (list: Array<string>) {
     const secondIndex: number = Math.floor(Math.random() * list.length);
     const secondParticipant: string = list[secondIndex];
     list.splice(secondIndex, 1);
+    // setGroup(group + 1);
     console.log(coffeeAddicts)
     console.log(group);
-    group++;
     return `${firstParticipant} and ${secondParticipant}`;
   } else {
     while (list.length > 3) {
@@ -33,27 +34,19 @@ const Randomiser = function (list: Array<string>) {
       const secondParticipant: string = list[secondIndex];
       list.splice(secondIndex, 1);
       console.log('are you sure you are not odd', group);
-      group++;
+      // setGroup(group + 1);
       return `${firstParticipant} and ${secondParticipant}`;
     }
     return `${list[0]}, ${list[1]}, ${list[2]}`;
   }
 };
 
-const GetGroup = function() {
-    return group;
-}
-
 const Pairer = function() {
     return (
       <div>
-        <h3>Group {GetGroup()}</h3>
         {Randomiser(coffeeAddicts)}
-        <h3>Group {GetGroup()}</h3>
         {Randomiser(coffeeAddicts)}
-        <h3>Group {GetGroup()}</h3>
         {Randomiser(coffeeAddicts)}
-        <h3>Group {group}</h3>
         {Randomiser(coffeeAddicts)}
       </div>
     );
