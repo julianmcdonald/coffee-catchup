@@ -1,5 +1,5 @@
 const coffeeAddicts = [
-  "Adam",
+  "Anton",
   "Betty",
   "Charles",
   "Debbie",

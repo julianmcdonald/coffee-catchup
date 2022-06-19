@@ -1,14 +1,3 @@
-const coffeeAddicts = [
-  "Adam",
-  "Betty",
-  "Charles",
-  "Debbie",
-  "Earl",
-  "Fiona",
-  "Garry",
-  "Hermione",
-];
-
 const Randomiser = (list: string[]): JSX.Element[] => {
   // list shuffler
   list = list.sort(() => (Math.random() > 0.5 ? 1 : -1));
@@ -22,7 +11,7 @@ const Randomiser = (list: string[]): JSX.Element[] => {
     allChunks.push(list.slice(i, i + chunkSize));
   }
   // We will check to see if the list was originally an odd number.
-  // If it is, we will combine the last 2 chunks as it will look something like this [["Adam", "Betty"], ["Charles"]].
+  // If it is, we will combine the last 2 chunks as it will look something like this [["Anton", "Betty"], ["Charles"]].
   // As we can see, "Charles" is by himself, which is no fun.
   if (list.length % 2 !== 0) {
     allChunks[allChunks.length - 2].push(allChunks[allChunks.length - 1][0]);
