@@ -15,6 +15,5 @@ export const People = ({ setPeople, people }: any) => {
       {name}
     </button>
   ));
-  console.log(people);
   return <div>{Person}</div>;
 };
