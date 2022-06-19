@@ -32,14 +32,14 @@ const Randomiser = (list: string[]): JSX.Element[] => {
   }
   // We are now returning all the objects.
   return allChunks.filter(Boolean).map((group: string[], index: number) => (
-    <p>
+    <p key={index}>
       {index + 1}. {group.join(", ")}
     </p>
   ));
 };
 
-const Pairer = function () {
-  return <div>{Randomiser(coffeeAddicts)}</div>;
+const Pairer = ({ people }: any) => {
+  return <div>{Randomiser(people)}</div>;
 };
 
 export default Pairer;
