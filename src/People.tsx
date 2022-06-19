@@ -9,11 +9,12 @@ const coffeeAddicts = [
   "Hermione",
 ];
 
-export const PeopleComponent = ({ setPeople, people }: any) => {
+export const People = ({ setPeople, people }: any) => {
   const Person = coffeeAddicts.map((name, index) => (
     <button key={index} onClick={() => setPeople([...people, name])}>
       {name}
     </button>
   ));
+  console.log(people);
   return <div>{Person}</div>;
 };

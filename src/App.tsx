@@ -1,7 +1,8 @@
-import { useState } from "react";
 import "./App.css";
-import Pairer from "./Pairer";
-import { PeopleComponent } from "./PeopleComponent";
+import { useState } from "react";
+import { Pairer } from "./Pairer";
+import { People } from "./People";
+import { PersonInput } from "./PersonInput";
 
 function App() {
   const [people, setPeople] = useState([] as string[]);
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <PeopleComponent setPeople={setPeople} people={people} />
+      <People setPeople={setPeople} people={people} />
+      <PersonInput setPeople={setPeople} people={people}/>
       <button onClick={() => setClicked(true)}>
         <h1>Pair 'em up!</h1>
       </button>

@@ -27,8 +27,6 @@ const Randomiser = (list: string[]): JSX.Element[] => {
   ));
 };
 
-const Pairer = ({ people }: any) => {
+export const Pairer = ({ people }: any) => {
   return <div>{Randomiser(people)}</div>;
 };
-
-export default Pairer;
