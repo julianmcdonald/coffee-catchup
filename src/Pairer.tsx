@@ -16,7 +16,7 @@ const Randomiser = (list: string[]): JSX.Element[] => {
   if (list.length % 2 !== 0) {
     allChunks[allChunks.length - 2].push(allChunks[allChunks.length - 1][0]);
     // Cleaning up the last group, because it currently looks like this:
-    // [["Adam", "Betty", "Chares"], ["Charles"]]; As we can see, "Charles" is in two groups.
+    // [["Anton", "Betty", "Chares"], ["Charles"]]; As we can see, "Charles" is in two groups.
     delete allChunks[allChunks.length - 1];
   }
   // We are now returning all the objects.
