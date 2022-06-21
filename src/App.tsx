@@ -6,16 +6,16 @@ import { PersonInput } from "./PersonInput";
 
 function App() {
   const [people, setPeople] = useState([] as string[]);
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState<number>(0);
 
   return (
     <div className="App">
       <People setPeople={setPeople} people={people} />
       <PersonInput setPeople={setPeople} people={people}/>
-      <button onClick={() => setClicked(true)}>
+      <button onClick={() => setClicked((i) => i+=1)}>
         <h1>Pair 'em up!</h1>
       </button>
-      {clicked && <Pairer people={people} />}
+      {clicked !==0 && <Pairer people={people} />}
     </div>
   );
 }
